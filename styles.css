@@ -1,57 +1,72 @@
-body {
-  font-family: sans-serif;
-  text-align: center;
-  background-color: #fff;
-}
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-.container {
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
   margin-top: 50px;
 }
 
-h1 {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+.container {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Permanent Marker', cursive;
   font-size: 40px;
-  margin-bottom: 20px;
 }
 
-input[type="text"] {
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-container input {
   padding: 10px;
-  width: 250px;
   font-size: 18px;
-  margin: 10px 0;
+  width: 250px;
 }
 
-#submit {
-  padding: 10px 30px;
+.input-container button {
+  padding: 10px 20px;
   font-size: 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 8px;
   background-color: white;
+  cursor: pointer;
 }
 
 .message {
-  font-size: 20px;
+  font-size: 22px;
   margin: 20px 0;
+  font-weight: bold;
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 0;
+  gap: 2px;
   justify-content: center;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .cell {
-  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
   background-color: pink;
-  font-size: 60px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  border: 1px solid black;
   cursor: pointer;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.hidden {
+  display: none;
 }
 
 .winner {
